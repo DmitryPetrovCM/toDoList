@@ -1,0 +1,21 @@
+@switch-btn-size: 50px;
+
+.wrong {
+  outline: 2px solid red;
+}
+
+.user-input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.add-on-preview-switch-btn {
+  position: absolute;
+  width: @switch-btn-size;
+  height: @switch-btn-size;
+  border-radius: 50%;
+  left: 50%;
+  top: (-@switch-btn-size - 10px);
+  transform: translateX(-@switch-btn-size / 2);
+}

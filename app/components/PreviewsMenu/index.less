@@ -1,0 +1,37 @@
+@menu-width: 300px;
+@menu-switch-size: 50px;
+
+.animation {
+  transition: transform 500ms ease 0ms;
+}
+
+.preview-menu {
+  max-width: @menu-width;
+  height: 100vh;
+  background-color: #d3f9e4;
+  position: relative;
+  .animation;
+
+  .menu-switch {
+    position: absolute;
+    right: -(@menu-switch-size / 2);
+    top: 50vh;
+    transform: translateY(-@menu-switch-size / 2);
+    width: @menu-switch-size;
+    height: @menu-switch-size;
+    border-radius: 50%;
+    outline: 0;
+  }
+
+  ul {
+    margin: 0;
+  }
+}
+
+.menu-is-visible {
+  transform: translateX(0);
+}
+
+.menu-is-hidden {
+  transform: translateX(-300px);
+}

@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: "./app/app.js", // входная точка - исходный файл
+  entry: "./app/index.js", // входная точка - исходный файл
   output: {
     path: path.resolve(__dirname, './public'),     // путь к каталогу выходных файлов - папка public
     publicPath: '/public/',
@@ -36,7 +36,7 @@ module.exports = {
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(NODE_ENV)
     }),
-    new ExtractTextPlugin("styles.css")
+    new ExtractTextPlugin("index.css")
   ]
 };
 
